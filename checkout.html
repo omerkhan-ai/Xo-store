@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GS6Q8VWB72"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-GS6Q8VWB72');
-</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>XO Store – Fragrance Pendant</title>
@@ -20,46 +11,48 @@
     <div class="checkout-card">
       <h2>Checkout</h2>
       <form id="checkout-form">
-        <label for="user_name">Full Name</label>
-        <input type="text" name="user_name" id="user_name" required />
-
-        <label for="user_email">Email Address</label>
-        <input type="email" name="user_email" id="user_email" required />
-
-        <label for="quantity">Quantity</label>
+        <input type="text" name="first_name" placeholder="First Name" required />
+        <input type="text" name="last_name" placeholder="Last Name" required />
+        <input type="email" name="user_email" placeholder="Email" required />
+        <input type="text" name="street_address" placeholder="Street Address" required />
+        <input type="text" name="apartment_unit" placeholder="Apartment / Unit (optional)" />
+        <input type="text" name="city" placeholder="City" required />
+        <input type="text" name="state" placeholder="State" required />
+        <input type="text" name="zip_code" placeholder="Zip Code" required />
+        <textarea name="delivery_instructions" placeholder="Delivery Instructions (optional)"></textarea>
         <input type="number" name="quantity" id="quantity" value="1" min="1" required />
+        <input type="tel" name="phone_number" placeholder="Phone Number (e.g., +1 555-123-4567)" pattern="^\+1\s?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$" required />
 
-        <div class="summary">
-          <p>XO Pendant - $39.99 each</p>
-          <p><strong>Total:</strong> <span id="total">$39.99</span></p>
-        </div>
-
-        <button type="submit" class="checkout-btn">Place Order</button>
+        <p><strong>Total: </strong><span id="total">$39.99</span></p>
+      
+        <button type="submit">Place Order</button>
       </form>
+      
+      
     </div>
   </section>
 
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script>
-    emailjs.init("8xLW0VLMthuCvusTJ"); // Replace with your EmailJS public key
-
+  <script type="text/javascript">
+    emailjs.init("8xLW0VLMthuCvusTJ"); // Your EmailJS public key
+  
     const form = document.getElementById("checkout-form");
     const quantityInput = document.getElementById("quantity");
     const totalDisplay = document.getElementById("total");
     const price = 29.99;
-
+  
     quantityInput.addEventListener("input", () => {
       const qty = parseInt(quantityInput.value) || 1;
       totalDisplay.textContent = `$${(qty * price).toFixed(2)}`;
     });
-
+  
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       emailjs.sendForm("service_v5dkktd", "template_r7luqtf", this).then(
         () => {
           alert("Order sent successfully! We'll contact you shortly.");
           form.reset();
-          totalDisplay.textContent = "$39.99";
+          totalDisplay.textContent = "$29.99"; // Corrected to match your price
         },
         (error) => {
           alert("Failed to send order. Please try again later.");
@@ -68,6 +61,7 @@
       );
     });
   </script>
+  
 
 
 <div id="popup" class="popup">
@@ -80,3 +74,5 @@
   
 </body>
 </html>
+
+
