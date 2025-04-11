@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>XO Store – Fragrance Pendant</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <section class="checkout-section">
+    <div class="checkout-card">
+      <h2>Checkout</h2>
+      <form id="checkout-form">
+        <label for="user_name">Full Name</label>
+        <input type="text" name="user_name" id="user_name" required />
+
+        <label for="user_email">Email Address</label>
+        <input type="email" name="user_email" id="user_email" required />
+
+        <label for="quantity">Quantity</label>
+        <input type="number" name="quantity" id="quantity" value="1" min="1" required />
+
+        <div class="summary">
+          <p>XO Pendant - $39.99 each</p>
+          <p><strong>Total:</strong> <span id="total">$39.99</span></p>
+        </div>
+
+        <button type="submit" class="checkout-btn">Place Order</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    emailjs.init("8xLW0VLMthuCvusTJ"); // Replace with your EmailJS public key
+
+    const form = document.getElementById("checkout-form");
+    const quantityInput = document.getElementById("quantity");
+    const totalDisplay = document.getElementById("total");
+    const price = 29.99;
+
+    quantityInput.addEventListener("input", () => {
+      const qty = parseInt(quantityInput.value) || 1;
+      totalDisplay.textContent = `$${(qty * price).toFixed(2)}`;
+    });
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      emailjs.sendForm("service_v5dkktd", "template_r7luqtf", this).then(
+        () => {
+          alert("Order sent successfully! We'll contact you shortly.");
+          form.reset();
+          totalDisplay.textContent = "$39.99";
+        },
+        (error) => {
+          alert("Failed to send order. Please try again later.");
+          console.error("FAILED...", error);
+        }
+      );
+    });
+  </script>
+</body>
+</html>
