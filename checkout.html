@@ -49,6 +49,13 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+
+    <header class="navbar">
+        <a href="index.html"><h1 class="logo">XO Store</h1></a>
+      </header>
+
+      
   <section class="checkout-section">
     <div class="checkout-card">
       <h2>Checkout</h2>
@@ -65,7 +72,7 @@
         <input type="number" name="quantity" id="quantity" value="1" min="1" required />
         <input type="tel" name="phone_number" placeholder="Phone Number (e.g., +1 555-123-4567)" pattern="^\+1\s?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$" required />
 
-        <p><strong>Total: </strong><span id="total">$39.99</span></p>
+        <p><strong>Total: </strong><span id="total">$19.99</span></p>
       
         <button type="submit">Place Order</button>
       </form>
@@ -81,7 +88,7 @@
     const form = document.getElementById("checkout-form");
     const quantityInput = document.getElementById("quantity");
     const totalDisplay = document.getElementById("total");
-    const price = 29.99;
+    const price = 19.99;
   
     quantityInput.addEventListener("input", () => {
       const qty = parseInt(quantityInput.value) || 1;
