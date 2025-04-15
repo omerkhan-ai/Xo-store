@@ -1,0 +1,452 @@
+
+
+
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    background-color: #fff;
+  }
+  
+  .hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    filter: brightness(0.6); /* slightly darken the image for contrast */
+  }
+  
+  .hero-text {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 1rem;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-text p {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn-hero {
+    background-color: #A6D6D6;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-hero:hover {
+    background-color: #8fc1c1;
+  }
+  
+   .blog-section, .reviews {
+    padding: 3rem 1rem;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  
+  .blog-section h2,
+  .reviews h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .blog-entry {
+    margin-bottom: 2rem;
+  }
+  
+  .blog-entry h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .review-card {
+    background-color: #F4F8D3;
+    border-left: 4px solid #A6D6D6;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
+  }
+  
+  .review-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  /* Blog Section */
+  #blogs {
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .blog-card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .blog-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  .blog-card p {
+    font-size: 1em;
+    color: #555;
+  }
+  
+  .blog-image {
+    width: 100%;        /* Ensures the image is responsive and takes up the full width of its container */
+    max-width: 500px;   /* Limits the maximum width of the image */
+    height: auto;       /* Keeps the aspect ratio intact */
+    object-fit: cover;  /* Ensures the image covers the area without distortion */
+    margin-bottom: 15px; /* Adds space below the image */
+    border-radius: 8px; /* Optional: adds rounded corners to the images */
+    display: block;     /* Makes sure images are displayed as block elements */
+    margin-left: auto;  /* Centers the image horizontally */
+    margin-right: auto; /* Centers the image horizontally */
+  }
+  
+  
+  .read-more {
+    background-color: #A6D6D6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .read-more:hover {
+    background-color: #F7CFD8;
+  }
+  
+  
+  /* Navbar Styles */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.9); /* Transparent background */
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .navbar .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #A6D6D6;
+    text-decoration: none;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .navbar-links li {
+    margin: 0;
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    color: #A6D6D6;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-links {
+      display: none;
+    }
+  
+    /* Optional mobile menu toggle button */
+    .navbar-toggle {
+      display: block;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  }
+  /* About Us Section */
+.about-us {
+    padding: 60px 20px;
+    background-color: #F4F8D3; /* You can adjust this color */
+  }
+  
+  .about-us .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .about-us h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #A6D6D6;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .about-us p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: justify;
+  }
+  
+  /* Optional: Add some responsive styling for smaller screens */
+  @media (max-width: 768px) {
+    .about-us h2 {
+      font-size: 2rem;
+    }
+  
+    .about-us p {
+      font-size: 1rem;
+    }
+  }
+  
+  .footer {
+    background-color: #F4F8D3;
+    color: #333;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 4rem;
+    border-top: 2px solid #A6D6D6;
+  }
+  
+  .footer-content h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    color: #A6D6D6;
+  }
+  
+  .footer p {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .footer-links a {
+    color: #F7CFD8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #A6D6D6;
+  }
+  
+
+  .contact-section {
+    padding: 4rem 2rem;
+    background-color: #F7CFD8;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .contact-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    width: 100%;
+    resize: none;
+  }
+  
+  .contact-form button {
+    background-color: #A6D6D6;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  
+  .contact-form .note {
+    font-size: 0.8rem;
+    color: #555;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  /* Small tablets and below */
+@media (max-width: 768px) {
+    .hero-text h1 {
+      font-size: 2.2rem;
+    }
+  
+    .hero-text p {
+      font-size: 1.1rem;
+    }
+  
+    .btn-hero {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+    }
+  
+    .navbar-container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+  
+    .navbar .logo {
+      font-size: 1.5rem;
+    }
+  
+    .about-us h2 {
+      font-size: 2rem;
+    }
+  
+    .blog-card h3 {
+      font-size: 1.4rem;
+    }
+  
+    .contact-section h2 {
+      font-size: 1.6rem;
+    }
+  }
+  
+  /* Phones */
+  @media (max-width: 600px) {
+    .hero-text h1 {
+      font-size: 1.8rem;
+    }
+  
+    .hero-text p {
+      font-size: 1rem;
+    }
+  
+    .blog-card,
+    .review-card {
+      padding: 1rem;
+    }
+  
+    .navbar-container {
+      padding: 1rem;
+    }
+  
+    .footer-content h2 {
+      font-size: 1.2rem;
+    }
+  
+    .footer-links {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 0.9rem;
+    }
+  
+    .contact-form button {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Extra small phones */
+  @media (max-width: 480px) {
+    .hero-text {
+      padding: 0.5rem;
+    }
+  
+    .hero-text h1 {
+      font-size: 1.5rem;
+    }
+  
+    .hero-text p {
+      font-size: 0.9rem;
+    }
+  
+    .btn-hero {
+      font-size: 0.8rem;
+      padding: 0.5rem 1rem;
+    }
+  
+    .about-us p,
+    .review-card,
+    .blog-card p {
+      font-size: 0.9rem;
+    }
+  
+    .contact-form {
+      gap: 0.75rem;
+    }
+  
+    .footer p {
+      font-size: 0.8rem;
+    }
+  }
+  
