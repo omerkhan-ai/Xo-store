@@ -49,42 +49,133 @@
 <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
 
 
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="landing.css" />
 </head>
 <body>
-  <header class="navbar">
-    <h1 class="logo">XO Store</h1>
-  </header>
-
-  <section class="hero">
-    <div class="hero-content">
-      <h1 class="hero-title">XO Fragrance Pendant</h1>
-      <p class="hero-description">Where scent meets elegance. A fragrance you wear like a jewel.</p>
-  
- <!-- Product Card -->
-<div class="card">
-    <div class="product-images">
-      <img src="productimg2.png.jpg"XO Pendant Front>
-      
-    </div>
-    <div class="heading">XO Pendant</div>
-    <div class="details">
-      A wearable scent experience.<br>Subtle. Stylish. Sublime.
-    </div>
-    <div class="price">$19.99</div>
-    <a href="product.html"><button class="btn1">Buy Now</button></a>
-    
+ <!-- Navbar -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <a href="#" class="logo">XO Store</a>
+    <ul class="navbar-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="product.html">product</a></li>
+      <li><a href="#blogs">Blog</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </div>
-  
+</nav>
+
+
+  <!-- Hero Section -->
+  <section id="hero"   class="hero">
+    <img src="productimg2.png.jpg" alt="XO Pendant" class="hero-image">
+    <div class="hero-text">
+      <h1>Keep the Scent of Love Close</h1>
+      <p>A fragrance pendant that keeps you remembered, always.</p>
+      <a href="product.html" class="btn-hero">Buy Now</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <!-- About Section -->
+<section id="About" class="about-us">
+  <div class="container">
+    <h2>About Us</h2>
+    <p>
+      At XO Store, we believe that a thoughtful gift has the power to make a lasting impact. Our story begins with a deeply personal journey: the search for the perfect gift. The founder of XO Store, after struggling to find something truly meaningful for his girlfriend, realized that sometimes the best gifts are those that combine utility, sentiment, and uniqueness.
+    </p>
+    <p>
+      The idea for our flagship product—the fragrance pendant—was born out of this frustration. The founder wanted to create something that not only served as a gift but also held emotional value. He envisioned a way to make memories last longer and allow the wearer to carry a piece of their loved one wherever they went. After a lot of thought and experimentation, he crafted the very first XO fragrance pendant, designed to carry a subtle scent of his cologne.
+    </p>
+    <p>
+      This simple yet meaningful gesture turned out to be an emotional gift, one that was cherished by his girlfriend. She could now wear his scent, evoking memories of their time together, and feel his presence even when they were miles apart. It was a gift of love, memory, and connection, all encapsulated in a beautiful pendant.
+    </p>
+    <p>
+      Realizing the potential for such an emotional gift, the founder decided to share it with the world. Thus, XO Store was born. Our mission is simple: to offer gifts that are not just objects, but emotional experiences. We want every gift from XO Store to tell a story, to be a symbol of love, care, and thoughtfulness.
+    </p>
+    <p>
+      At XO Store, we specialize in crafting premium fragrance pendants. Our pendants are not only designed with beauty and style in mind but are also carefully crafted to carry and release your favorite scents throughout the day. Each pendant is a statement piece, elegantly combining functionality with sentimental value. Whether you're looking to surprise a loved one or treat yourself, our pendants serve as a lasting reminder of the moments you cherish.
+    </p>
+    <p>
+      We take pride in the meticulous craftsmanship behind each pendant. Every detail is designed with the utmost care and attention, ensuring that our customers receive a product of the highest quality. We believe that a pendant should not just be a piece of jewelry; it should be a vessel for memories, an extension of your emotions, and a reminder of love.
+    </p>
+    <p>
+      Our vision is to create more than just a store—we aim to build a community of people who believe in the power of gifting and the beauty of meaningful connections. We understand that the best gifts are often the ones that come from the heart, and our pendants are designed to help you express just that.
+    </p>
+    <p>
+      As we continue to grow, we remain committed to offering unique and personalized products that resonate with our customers on a deeper level. XO Store is more than just a brand—it's a celebration of love, memories, and the relationships that shape our lives.
+    </p>
+    <p>
+      Thank you for choosing XO Store, where every gift is a gesture of love.
+    </p>
+  </div>
+</section>
+
+
+<!-- Blog Section -->
+<section id="blogs">
+  <h2>Our Blog</h2>
+  <div id="blog-list"></div>
+</section>
+
+
   
 
-  <footer>
-    <p>© 2025 XO Store. All rights reserved.</p>
+  <!-- Testimonials -->
+  <section id="reviews"   class="reviews">
+    <h2>Customer Reviews</h2>
+
+    <div class="review-card">
+      <div class="review-header">
+        <div class="reviewer-name">Katie</div>
+        <div class="review-stars"><span>⭐⭐⭐⭐⭐</span></div>
+      </div>
+      <p class="review-text">
+        "This pendant is a game changer! It smells amazing and is so stylish. I wear it every day, and it’s definitely worth the price."
+      </p>
+    </div>
+
+    <div class="review-card">
+      <div class="review-header">
+        <div class="reviewer-name">Anna Smith</div>
+        <div class="review-stars"><span>⭐⭐⭐⭐</span></div>
+      </div>
+      <p class="review-text">
+        "Loved the scent! The only reason I didn't give it five stars is that the scent doesn't last as long as I’d hoped. But it’s still great."
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" disabled>Send Message</button>
+      <p class="note">*Form submission coming soon</p>
+    </form>
+  </section>
+  
+
+  <footer class="footer">
+    <div class="footer-content">
+      <h2>XO Store</h2>
+      <p>&copy; 2025 XO Store. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#blog">Blog</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
   </footer>
+  
+
+
+  <script src="blog.js" defer></script>
+
+
 </body>
 </html>
-
-
-
-
-
